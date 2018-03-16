@@ -47,7 +47,7 @@ Sparky.task("config", () => {
   vendor = fuse.bundle("vendor").instructions("~ index.jsx")
 
   // Bundle the app
-  app = fuse.bundle("app").instructions("> [index.jsx]")
+  app = fuse.bundle("app").instructions("> [index.jsx] + [pages/**/*.component.js]")
 });
 
 // This is the default task that gets called when you run "node fuse"

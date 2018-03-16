@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/server.js",
+    "start2": "node server/server2.js",
     "dev": "node fuse",
     "dist": "node fuse dist",
     "test": "jest --watch"
