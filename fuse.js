@@ -18,22 +18,22 @@ Sparky.task("config", () => {
       hash: isProduction,
       output: "dist/$name.js",
       plugins: [
-          // BabelPlugin will take care of all the jsx files in React
-          BabelPlugin({
-              config: {
-                  sourceMaps: true,
-                  presets: ["env", "react"],                  
-              },
-          }),
+        // BabelPlugin will take care of all the jsx files in React
+        BabelPlugin({
+          config: {
+            sourceMaps: true,
+            presets: ["env", "react"],
+          },
+        }),
 
-          // SVG & CSS plugins will make sure to add CSS & SVG files to your bundle when you import them
-          SVGPlugin(), CSSPlugin(),
+        // SVG & CSS plugins will make sure to add CSS & SVG files to your bundle when you import them
+        SVGPlugin(), CSSPlugin(),
 
-          // This plugin adds your bundles to the "src/index.html" file and store the new file in the "dist" folder
-          WebIndexPlugin({
-              template: "src/index.html",
-              path: "../dist"
-          }),
+        // This plugin adds your bundles to the "src/index.html" file and store the new file in the "dist" folder
+        WebIndexPlugin({
+          template: "src/index.html",
+          path: "../dist"
+        }),
 
           // Quantum plugin is an optional optimizer made by Fusebox to make your bundle work faster
           isProduction && QuantumPlugin({
